@@ -1,0 +1,9 @@
+eureka:
+  instance:
+    #    hostname: localhost
+    prefer-ip-address: true
+  client:
+    register-with-eureka: false #表示是否注册Eureka服务器,因为自身作为服务注册中心，所以为false
+    fetch-registry: false #是否从eureka上获取注册信息,表明自己是一个server
+    service-url:
+      defaultZone: http://192.168.2.82:9090/eureka/,http://172.16.1.51:9090/eureka/
